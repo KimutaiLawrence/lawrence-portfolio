@@ -1,114 +1,97 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
-import { useDarkMode } from '../composables/useDarkMode'
+import { ref } from 'vue';
 
-const { isDark } = useDarkMode()
-const isMenuOpen = ref(false)
-const isScrolled = ref(false)
-const scrollThreshold = 50
+const isMenuOpen = ref(false);
 
 const toggleMenu = () => {
-  isMenuOpen.value = !isMenuOpen.value
-}
+  isMenuOpen.value = !isMenuOpen.value;
+};
 
 const closeMenu = () => {
-  isMenuOpen.value = false
-}
+  isMenuOpen.value = false;
+};
 
-const checkScroll = () => {
-  isScrolled.value = window.scrollY > scrollThreshold
-}
-
-onMounted(() => {
-  window.addEventListener('scroll', checkScroll)
-  checkScroll() // Initial check
-})
-
-onUnmounted(() => {
-  window.removeEventListener('scroll', checkScroll)
-})
+const navLinks = [
+  { text: 'Home', href: '#home' },
+  { text: 'Skills', href: '#skills' },
+  { text: 'Experience', href: '#experience' },
+  { text: 'Projects', href: '#projects' },
+  { text: 'Education', href: '#education' },
+  { text: 'Contact', href: '#contact' },
+];
 </script>
 
 <template>
-  <header 
-    :class="[
-      'fixed top-0 left-0 w-full z-50 transition-all duration-300',
-      isScrolled ? 'bg-white/90 dark:bg-dark-900/90 backdrop-blur-sm shadow-sm' : 'bg-transparent'
-    ]"
-  >
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-dark-900/95 backdrop-blur-md border-b border-gray-200 dark:border-dark-700 transition-colors duration-300">
     <div class="container">
       <div class="flex items-center justify-between h-16 md:h-20">
         <!-- Logo -->
-        <a href="/" class="flex items-center text-xl font-bold">
-          <span class="text-primary-600 dark:text-primary-400">Lawrence</span>
-          <span class="ml-1">Kimutai</span>
+        <a href="#home" class="text-2xl font-bold text-gray-900 dark:text-white flex items-center space-x-2">
+          <span class="text-primary-600 dark:text-primary-400">L</span>
+          <span>Kimutai</span>
         </a>
         
         <!-- Desktop Navigation -->
-        <nav class="hidden md:flex items-center space-x-8">
-          <a href="/#home" class="nav-link">Home</a>
-          <a href="/#about" class="nav-link">About</a>
-          <a href="/#skills" class="nav-link">Skills</a>
-          <a href="/#experience" class="nav-link">Experience</a>
-          <a href="/#projects" class="nav-link">Projects</a>
-          <a href="/#education" class="nav-link">Education</a>
-          <a href="/#contact" class="nav-link">Contact</a>
+        <nav class="hidden md:flex space-x-1">
+          <a 
+            v-for="link in navLinks" 
+            :key="link.text" 
+            :href="link.href" 
+            class="px-3 py-2 rounded-md text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400 font-medium transition-colors"
+          >
+            {{ link.text }}
+          </a>
         </nav>
         
         <!-- Mobile Menu Button -->
         <button 
-          @click="toggleMenu"
-          aria-label="Menu"
-          class="md:hidden flex items-center p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"
+          @click="toggleMenu" 
+          class="md:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white focus:outline-none"
+          aria-controls="mobile-menu" 
+          :aria-expanded="isMenuOpen"
         >
+          <span class="sr-only">{{ isMenuOpen ? 'Close menu' : 'Open menu' }}</span>
           <svg 
-            xmlns="http://www.w3.org/2000/svg" 
+            v-if="!isMenuOpen" 
             class="h-6 w-6" 
+            xmlns="http://www.w3.org/2000/svg" 
             fill="none" 
             viewBox="0 0 24 24" 
             stroke="currentColor"
           >
-            <path 
-              v-if="!isMenuOpen" 
-              stroke-linecap="round" 
-              stroke-linejoin="round" 
-              stroke-width="2" 
-              d="M4 6h16M4 12h16M4 18h16" 
-            />
-            <path 
-              v-else 
-              stroke-linecap="round" 
-              stroke-linejoin="round" 
-              stroke-width="2" 
-              d="M6 18L18 6M6 6l12 12" 
-            />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg 
+            v-else 
+            class="h-6 w-6" 
+            xmlns="http://www.w3.org/2000/svg" 
+            fill="none" 
+            viewBox="0 0 24 24" 
+            stroke="currentColor"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
       </div>
     </div>
     
-    <!-- Mobile Navigation -->
+    <!-- Mobile Menu -->
     <div 
-      v-show="isMenuOpen"
-      class="md:hidden bg-white dark:bg-dark-900 shadow-lg origin-top animate-fade-in"
+      id="mobile-menu" 
+      class="md:hidden" 
+      :class="{ 'block': isMenuOpen, 'hidden': !isMenuOpen }"
     >
-      <div class="container py-4">
-        <nav class="flex flex-col space-y-4">
-          <a @click="closeMenu" href="/#home" class="nav-link py-2">Home</a>
-          <a @click="closeMenu" href="/#about" class="nav-link py-2">About</a>
-          <a @click="closeMenu" href="/#skills" class="nav-link py-2">Skills</a>
-          <a @click="closeMenu" href="/#experience" class="nav-link py-2">Experience</a>
-          <a @click="closeMenu" href="/#projects" class="nav-link py-2">Projects</a>
-          <a @click="closeMenu" href="/#education" class="nav-link py-2">Education</a>
-          <a @click="closeMenu" href="/#contact" class="nav-link py-2">Contact</a>
-        </nav>
+      <div class="px-4 pt-2 pb-3 space-y-1 border-t border-gray-200 dark:border-dark-700">
+        <a 
+          v-for="link in navLinks" 
+          :key="link.text" 
+          :href="link.href" 
+          @click="closeMenu"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400 transition-colors"
+        >
+          {{ link.text }}
+        </a>
       </div>
     </div>
   </header>
 </template>
-
-<style scoped>
-.nav-link {
-  @apply font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors;
-}
-</style>

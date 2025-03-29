@@ -18,9 +18,10 @@ export default defineConfig({
     strictPort: true,
     cors: true,
     hmr: {
-      host: 'localhost',
-      protocol: 'ws',
-      clientPort: null
+      clientPort: 443,
+      port: 5000,
+      host: '3545b617-c82d-4f01-8668-6285430bdf0c-00-2vayfclkz13hx.janeway.replit.dev',
+      protocol: 'wss'
     },
     watch: {
       usePolling: true
