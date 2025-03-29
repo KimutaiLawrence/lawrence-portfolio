@@ -6,7 +6,7 @@ const experiences = [
     title: 'Software Engineer',
     company: 'Ramani Geosystems',
     location: 'Nairobi, Kenya',
-    period: 'September 2024 - Current',
+    period: 'January 2024 - Current',
     description: `
       As a Software Engineer at Ramani Geosystems, I contribute to projects that integrate geospatial data with software development, optimizing system functionality and enhancing user experience.
     `,
@@ -42,8 +42,8 @@ const experiences = [
       Project: Small-scale Crop Mapping using AI/ML
     `,
     responsibilities: [
-      'Developed a Graphical User Interface (GUI) for crop-type mapping using machine learning and AI technologies',
-      'Integrated solution with Google Earth Engine and a PostgreSQL database',
+      'Developed a Graphical User Interface (GUI) for crop-type mapping using machine learning and AI technologies integrated with Google Earth Engine and a PostgreSQL database',
+      'Leveraged expertise in ML, geospatial analysis, web development, and database management',
       'Created an efficient, scalable solution for small-scale crop mapping, supporting data-driven decisions in food security',
       'Publication: Geospatial Solutions to Food Security: Small-scale Crop Mapping using AI/ML - A Case Study of Muringato'
     ],
