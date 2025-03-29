@@ -1,105 +1,84 @@
+<script setup>
+// Experience section with actual data based on CV
+const experiences = [
+  {
+    title: 'Software Engineer',
+    company: 'Ramani Geosystems',
+    location: 'Nairobi, Kenya',
+    period: 'January 2024 - Current',
+    description: 'As a Software Engineer at Ramani Geosystems, I contribute to projects that integrate geospatial data with software development, optimizing system functionality and enhancing user experience.',
+    responsibilities: [
+      'Development of County Land Information Management Systems (LIMS) for Murang\'a, Kajiado, and additional counties',
+      'Building and training machine learning and deep learning models to detect and classify sugarcane from aerial imagery',
+      'Developing software to facilitate the visualization and analysis of LiDAR data',
+      'Supporting various geospatial projects and collaborating with cross-functional teams'
+    ],
+    skills: ['GIS', 'Machine Learning', 'Software Development', 'LiDAR', 'Land Information Systems']
+  },
+  {
+    title: 'Research Assistant',
+    company: 'University Centre for Data Science and Artificial Intelligence (DSAIL - DEKUT)',
+    location: 'Nyeri, Kenya',
+    period: 'May 2022 - May 2024',
+    description: 'Contributed to various projects that applied data science and AI skills to address real-world challenges.',
+    responsibilities: [
+      'Conducted analysis to correlate water levels with surrounding land use patterns',
+      'Utilized sensor data from the river to build predictive models assessing potential flood risks',
+      'Provided valuable insights for disaster preparedness and management'
+    ],
+    skills: ['Data Science', 'AI', 'Water Resource Management', 'Predictive Modeling', 'Flood Risk Assessment']
+  },
+  {
+    title: 'Geospatial Developer Intern',
+    company: 'Kenya Space Agency (In Collaboration with Dedan Kimathi University of Technology)',
+    location: 'Nairobi, Kenya',
+    period: 'December 2021 - June 2022',
+    description: 'Project: Small-scale Crop Mapping using AI/ML',
+    responsibilities: [
+      'Developed a Graphical User Interface (GUI) for crop-type mapping using machine learning and AI technologies integrated with Google Earth Engine and a PostgreSQL database',
+      'Leveraged expertise in ML, geospatial analysis, web development, and database management',
+      'Created an efficient, scalable solution for small-scale crop mapping, supporting data-driven decisions in food security',
+      'Publication: Geospatial Solutions to Food Security: Small-scale Crop Mapping using AI/ML - A Case Study of Muringato'
+    ],
+    skills: ['AI/ML', 'Google Earth Engine', 'PostgreSQL', 'GUI Development', 'Food Security']
+  }
+]
+</script>
+
 <template>
-  <section id="experience" class="section bg-gray-50 dark:bg-dark-800">
+  <section id="experience" class="section bg-white dark:bg-dark-800">
     <div class="container">
-      <h2 class="text-center mb-16">Work Experience</h2>
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-dark-900 dark:text-white mb-4">Work Experience</h2>
+        <div class="w-20 h-1 bg-primary-500 mx-auto"></div>
+      </div>
       
-      <div class="max-w-3xl mx-auto">
+      <div class="max-w-4xl mx-auto">
         <div class="space-y-12">
           <!-- Experience Item 1 -->
-          <div class="relative pl-8 sm:pl-12">
+          <div v-for="(experience, index) in experiences" :key="index" class="relative pl-8 sm:pl-12">
             <!-- Timeline line -->
-            <div class="absolute top-0 left-0 w-1 h-full bg-primary-200 dark:bg-primary-900/30"></div>
+            <div v-if="index < experiences.length - 1" class="absolute top-0 left-0 w-1 h-full bg-primary-200 dark:bg-primary-900/30"></div>
             
             <!-- Timeline dot -->
             <div class="absolute top-0 left-0 -ml-1.5 w-4 h-4 rounded-full border-2 border-primary-500 dark:border-primary-400 bg-white dark:bg-dark-800"></div>
             
             <div class="bg-white dark:bg-dark-700 rounded-lg shadow-md p-6 border border-gray-200 dark:border-dark-600">
-              <h3 class="text-xl font-bold text-gray-900 dark:text-white">Senior Geospatial Developer</h3>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white">{{ experience.title }}</h3>
               <div class="flex flex-wrap justify-between items-center mt-1 mb-4">
-                <div class="text-primary-600 dark:text-primary-400 font-medium">GeoDev Solutions</div>
-                <div class="text-sm text-gray-500 dark:text-gray-400">June 2020 - Present</div>
+                <div class="text-primary-600 dark:text-primary-400 font-medium">{{ experience.company }}</div>
+                <div class="text-sm text-gray-500 dark:text-gray-400">{{ experience.period }}</div>
               </div>
               <div class="text-gray-700 dark:text-gray-300 space-y-2">
-                <p>Led the development of interactive web mapping applications for urban planning and environmental monitoring.</p>
+                <p>{{ experience.description }}</p>
                 <ul class="list-disc pl-5 space-y-1">
-                  <li>Designed and implemented a real-time flood monitoring dashboard using React, Mapbox GL, and WebSockets.</li>
-                  <li>Developed a geospatial data processing pipeline using Python, GDAL, and AWS Lambda.</li>
-                  <li>Optimized database queries with PostGIS, improving application performance by 40%.</li>
-                  <li>Mentored junior developers and conducted code reviews to ensure high-quality deliverables.</li>
+                  <li v-for="(resp, rIndex) in experience.responsibilities" :key="rIndex">{{ resp }}</li>
                 </ul>
               </div>
               <div class="mt-4 flex flex-wrap gap-2">
-                <span class="skill-badge">React</span>
-                <span class="skill-badge">Mapbox GL</span>
-                <span class="skill-badge">Python</span>
-                <span class="skill-badge">AWS</span>
-                <span class="skill-badge">PostGIS</span>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Experience Item 2 -->
-          <div class="relative pl-8 sm:pl-12">
-            <!-- Timeline line -->
-            <div class="absolute top-0 left-0 w-1 h-full bg-primary-200 dark:bg-primary-900/30"></div>
-            
-            <!-- Timeline dot -->
-            <div class="absolute top-0 left-0 -ml-1.5 w-4 h-4 rounded-full border-2 border-primary-500 dark:border-primary-400 bg-white dark:bg-dark-800"></div>
-            
-            <div class="bg-white dark:bg-dark-700 rounded-lg shadow-md p-6 border border-gray-200 dark:border-dark-600">
-              <h3 class="text-xl font-bold text-gray-900 dark:text-white">GIS Developer</h3>
-              <div class="flex flex-wrap justify-between items-center mt-1 mb-4">
-                <div class="text-primary-600 dark:text-primary-400 font-medium">MapTech Innovations</div>
-                <div class="text-sm text-gray-500 dark:text-gray-400">March 2018 - May 2020</div>
-              </div>
-              <div class="text-gray-700 dark:text-gray-300 space-y-2">
-                <p>Built custom GIS solutions for government agencies and NGOs focused on sustainable development.</p>
-                <ul class="list-disc pl-5 space-y-1">
-                  <li>Created a land-use planning application using OpenLayers, Vue.js, and GeoServer.</li>
-                  <li>Implemented spatial analysis tools for biodiversity conservation using Python and GeoPandas.</li>
-                  <li>Developed a mobile data collection platform for field surveys with React Native and Leaflet.</li>
-                  <li>Integrated various web services and APIs for geocoding, routing, and satellite imagery.</li>
-                </ul>
-              </div>
-              <div class="mt-4 flex flex-wrap gap-2">
-                <span class="skill-badge">Vue.js</span>
-                <span class="skill-badge">OpenLayers</span>
-                <span class="skill-badge">GeoServer</span>
-                <span class="skill-badge">React Native</span>
-                <span class="skill-badge">Python</span>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Experience Item 3 -->
-          <div class="relative pl-8 sm:pl-12">
-            <!-- Timeline line -->
-            <div class="absolute top-0 left-0 w-1 h-full bg-primary-200 dark:bg-primary-900/30"></div>
-            
-            <!-- Timeline dot -->
-            <div class="absolute top-0 left-0 -ml-1.5 w-4 h-4 rounded-full border-2 border-primary-500 dark:border-primary-400 bg-white dark:bg-dark-800"></div>
-            
-            <div class="bg-white dark:bg-dark-700 rounded-lg shadow-md p-6 border border-gray-200 dark:border-dark-600">
-              <h3 class="text-xl font-bold text-gray-900 dark:text-white">Junior Software Engineer</h3>
-              <div class="flex flex-wrap justify-between items-center mt-1 mb-4">
-                <div class="text-primary-600 dark:text-primary-400 font-medium">Tech Nexus</div>
-                <div class="text-sm text-gray-500 dark:text-gray-400">July 2016 - February 2018</div>
-              </div>
-              <div class="text-gray-700 dark:text-gray-300 space-y-2">
-                <p>Worked on various web and mobile applications with a focus on location-based services.</p>
-                <ul class="list-disc pl-5 space-y-1">
-                  <li>Developed front-end features for a location-based social networking app using JavaScript and Leaflet.</li>
-                  <li>Created REST APIs for geospatial data using Node.js, Express, and MongoDB.</li>
-                  <li>Implemented geofencing and proximity alert features for mobile applications.</li>
-                  <li>Participated in UI/UX design sessions and implemented responsive user interfaces.</li>
-                </ul>
-              </div>
-              <div class="mt-4 flex flex-wrap gap-2">
-                <span class="skill-badge">JavaScript</span>
-                <span class="skill-badge">Leaflet</span>
-                <span class="skill-badge">Node.js</span>
-                <span class="skill-badge">MongoDB</span>
-                <span class="skill-badge">Express</span>
+                <span v-for="(skill, sIndex) in experience.skills" :key="sIndex" class="px-3 py-1 text-xs rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300">
+                  {{ skill }}
+                </span>
               </div>
             </div>
           </div>
@@ -114,3 +93,7 @@
     </div>
   </section>
 </template>
+
+<style scoped>
+/* Nothing needed here as Tailwind is handling most styling */
+</style>

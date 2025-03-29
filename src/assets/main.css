@@ -22,6 +22,19 @@
   h2 {
     @apply text-3xl md:text-4xl font-bold;
   }
+  
+  /* Font Styles */
+  .font-sf-pro {
+    font-family: 'SF Pro Display', 'SF Pro', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  }
+  
+  .font-sf-mono {
+    font-family: 'SF Mono', SFMono-Regular, ui-monospace, Menlo, Monaco, Consolas, monospace;
+  }
+  
+  .font-new-york {
+    font-family: 'New York', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+  }
 }
 
 @layer components {

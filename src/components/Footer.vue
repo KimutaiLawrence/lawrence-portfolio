@@ -57,7 +57,7 @@
           </p>
           <div class="flex flex-wrap gap-4 text-sm text-gray-600 dark:text-gray-400">
             <a href="/#home" class="hover:text-primary-600 dark:hover:text-primary-400">Home</a>
-            <a href="/#about" class="hover:text-primary-600 dark:hover:text-primary-400">About</a>
+            <a href="/#skills" class="hover:text-primary-600 dark:hover:text-primary-400">Skills</a>
             <a href="/#projects" class="hover:text-primary-600 dark:hover:text-primary-400">Projects</a>
             <a href="/#contact" class="hover:text-primary-600 dark:hover:text-primary-400">Contact</a>
           </div>

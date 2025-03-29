@@ -39,6 +39,15 @@
                 <span class="relative z-10">Contact Me</span>
                 <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-500 dark:bg-primary-400 group-hover:w-full transition-all duration-300"></span>
               </a>
+              <a href="/Lawrence-Kimutai-CV.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline relative overflow-hidden group transform transition-all duration-300 hover:scale-105 hover:border-primary-400 dark:hover:border-primary-500">
+                <span class="relative z-10 flex items-center">
+                  Download CV
+                  <svg class="ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                </span>
+                <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-500 dark:bg-primary-400 group-hover:w-full transition-all duration-300"></span>
+              </a>
             </div>
             
             <!-- Social Links -->
@@ -109,7 +118,7 @@
                 <div class="relative w-full h-full overflow-hidden">
                   <!-- Main Profile Image -->
                   <img 
-                    src="/images/profile/lawrence_profile.jpg" 
+                    src="/images/profile.jpg" 
                     alt="Lawrence Kimutai" 
                     class="w-full h-full object-cover object-top transition-all duration-500 ease-in-out filter group-hover:scale-105"
                   />
