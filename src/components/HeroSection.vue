@@ -54,7 +54,7 @@
             <div class="pt-6 animate-fade-in opacity-0" style="animation-delay: 0.9s; animation-fill-mode: forwards;">
               <div class="flex space-x-5">
                 <a 
-                  href="https://dekut-dsail.github.io/" 
+                  href="https://github.com/KimutaiLawrence" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   class="text-gray-500 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"

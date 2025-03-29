@@ -15,7 +15,7 @@
         <!-- Social Links -->
         <div class="flex space-x-4">
           <a 
-            href="https://dekut-dsail.github.io/" 
+            href="https://github.com/KimutaiLawrence" 
             target="_blank" 
             rel="noopener noreferrer"
             class="social-link"

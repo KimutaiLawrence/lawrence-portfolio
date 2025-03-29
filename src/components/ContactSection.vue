@@ -74,7 +74,7 @@ const handleSubmit = async () => {
                 <div class="ml-4">
                   <h4 class="text-lg font-medium text-gray-900 dark:text-white">Email</h4>
                   <p class="mt-1 text-gray-600 dark:text-gray-300">
-                    <a href="mailto:lawrencekimutai@gmail.com" class="hover:text-primary-600 dark:hover:text-primary-400">lawrencekimutai@gmail.com</a>
+                    <a href="mailto:lawrencekimutai001@gmail.com" class="hover:text-primary-600 dark:hover:text-primary-400">lawrencekimutai001@gmail.com</a>
                   </p>
                 </div>
               </div>
@@ -98,6 +98,22 @@ const handleSubmit = async () => {
                 <div class="flex-shrink-0">
                   <div class="flex items-center justify-center h-12 w-12 rounded-md bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h4 class="text-lg font-medium text-gray-900 dark:text-white">WhatsApp</h4>
+                  <p class="mt-1 text-gray-600 dark:text-gray-300">
+                    <a href="https://wa.me/254759629059" target="_blank" class="hover:text-primary-600 dark:hover:text-primary-400">+254 759 629 059</a>
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0">
+                  <div class="flex items-center justify-center h-12 w-12 rounded-md bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                     </svg>
                   </div>
@@ -106,7 +122,7 @@ const handleSubmit = async () => {
                   <h4 class="text-lg font-medium text-gray-900 dark:text-white">Let's connect</h4>
                   <div class="mt-2 flex space-x-4">
                     <a 
-                      href="https://dekut-dsail.github.io/" 
+                      href="https://github.com/KimutaiLawrence" 
                       target="_blank" 
                       rel="noopener noreferrer" 
                       class="text-gray-500 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors"
