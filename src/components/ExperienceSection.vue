@@ -5,7 +5,7 @@ const experiences = [
     title: 'Software Engineer',
     company: 'Ramani Geosystems',
     location: 'Nairobi, Kenya',
-    period: 'January 2024 - Current',
+    period: 'September 2024 - Current',
     description: 'As a Software Engineer at Ramani Geosystems, I contribute to projects that integrate geospatial data with software development, optimizing system functionality and enhancing user experience.',
     responsibilities: [
       'Development of County Land Information Management Systems (LIMS) for Murang\'a, Kajiado, and additional counties',

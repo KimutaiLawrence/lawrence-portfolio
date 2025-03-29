@@ -25,8 +25,8 @@
               I create interactive web mapping solutions, geospatial data pipelines, and location-based applications to solve complex spatial challenges.
             </p>
             
-            <div class="flex flex-wrap gap-4 animate-fade-in opacity-0" style="animation-delay: 0.7s; animation-fill-mode: forwards;">
-              <a href="#projects" class="btn btn-primary relative group overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
+            <div class="flex gap-4 animate-fade-in opacity-0" style="animation-delay: 0.7s; animation-fill-mode: forwards;">
+              <a href="#projects" class="btn btn-primary relative group overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-lg whitespace-nowrap">
                 <span class="relative z-10 flex items-center">
                   Explore Projects
                   <svg class="ml-2 h-5 w-5 transform transition-transform duration-300 group-hover:translate-x-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -35,19 +35,19 @@
                 </span>
                 <span class="absolute inset-0 bg-gradient-to-r from-primary-600 to-primary-500 dark:from-primary-700 dark:to-primary-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
               </a>
-              <a href="#contact" class="btn btn-outline relative overflow-hidden group transform transition-all duration-300 hover:scale-105 hover:border-primary-400 dark:hover:border-primary-500">
+              <a href="#contact" class="btn btn-outline relative overflow-hidden group transform transition-all duration-300 hover:scale-105 hover:border-primary-400 dark:hover:border-primary-500 whitespace-nowrap">
                 <span class="relative z-10">Contact Me</span>
                 <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-500 dark:bg-primary-400 group-hover:w-full transition-all duration-300"></span>
               </a>
-              <a href="/Lawrence-Kimutai-CV.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline relative overflow-hidden group transform transition-all duration-300 hover:scale-105 hover:border-primary-400 dark:hover:border-primary-500">
+              <button @click="handleWhatsAppClick" class="btn btn-outline relative overflow-hidden group transform transition-all duration-300 hover:scale-105 hover:border-primary-400 dark:hover:border-primary-500 whitespace-nowrap">
                 <span class="relative z-10 flex items-center">
-                  Download CV
+                  Get CV via WhatsApp
                   <svg class="ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                   </svg>
                 </span>
                 <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-500 dark:bg-primary-400 group-hover:w-full transition-all duration-300"></span>
-              </a>
+              </button>
             </div>
             
             <!-- Social Links -->
@@ -120,14 +120,16 @@
                   <img 
                     src="/images/profile.jpg" 
                     alt="Lawrence Kimutai" 
-                    class="w-full h-full object-cover object-top transition-all duration-500 ease-in-out filter group-hover:scale-105"
+                    class="w-full h-full object-cover object-center transition-all duration-500 ease-in-out group-hover:scale-105"
+                    loading="eager"
+                    decoding="async"
                   />
                   
                   <!-- Radial Overlay for Vignette Effect -->
-                  <div class="absolute inset-0 bg-gradient-to-tr from-black/20 via-transparent to-primary-500/30 mix-blend-overlay"></div>
+                  <div class="absolute inset-0 bg-gradient-to-tr from-black/10 via-transparent to-primary-500/20 mix-blend-overlay"></div>
                   
                   <!-- Hover Overlay -->
-                  <div class="absolute inset-0 bg-primary-500/10 dark:bg-primary-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div class="absolute inset-0 bg-primary-500/5 dark:bg-primary-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               </div>
               
@@ -147,5 +149,62 @@
         </div>
       </div>
     </div>
+
+    <!-- CV Code Modal -->
+    <div v-if="showModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+      <div class="bg-white dark:bg-dark-800 rounded-lg p-6 max-w-md w-full mx-4">
+        <div class="text-center">
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Enter CV Access Code</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">Please enter the code provided in our WhatsApp conversation.</p>
+          
+          <div v-if="!isCodeValid">
+            <input 
+              v-model="cvCode"
+              type="text"
+              placeholder="Enter code"
+              class="w-full px-4 py-2 border border-gray-300 dark:border-dark-600 rounded-lg focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400 focus:border-transparent dark:bg-dark-700 dark:text-white"
+            />
+            <button 
+              @click="validateCode"
+              class="mt-4 btn btn-primary w-full"
+            >
+              Validate Code
+            </button>
+          </div>
+          
+          <div v-else class="text-green-600 dark:text-green-400">
+            <svg class="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <p>Code validated! Downloading CV...</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 </template>
+
+<script setup>
+import { ref } from 'vue';
+
+const showModal = ref(false);
+const cvCode = ref('');
+const isCodeValid = ref(false);
+
+const handleWhatsAppClick = () => {
+  window.open('https://wa.me/254759629059?text=Hi%20Lawrence%2C%20I%20am%20interested%20in%20your%20CV', '_blank');
+  showModal.value = true;
+};
+
+const validateCode = () => {
+  if (cvCode.value === '12345') {
+    isCodeValid.value = true;
+    // Redirect to CV download after a short delay
+    setTimeout(() => {
+      window.location.href = '/Lawrence-Kimutai-CV.pdf';
+    }, 1000);
+  } else {
+    alert('Invalid code. Please try again.');
+  }
+};
+</script>
