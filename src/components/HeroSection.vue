@@ -74,11 +74,13 @@
         <div class="order-1 lg:order-2 flex justify-center lg:justify-end">
           <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-tr from-primary-500 to-primary-300 dark:from-primary-600 dark:to-primary-400 shadow-xl">
             <div class="absolute inset-3 bg-white dark:bg-dark-800 rounded-full overflow-hidden border-4 border-white dark:border-dark-700">
-              <div class="w-full h-full flex items-center justify-center bg-gray-100 dark:bg-dark-700">
-                <!-- Placeholder for Profile Image -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-32 w-32 text-gray-400 dark:text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
+              <div class="w-full h-full bg-gray-100 dark:bg-dark-700 overflow-hidden">
+                <!-- Profile Image with focus on upper part of portrait -->
+                <img 
+                  src="/images/profile/lawrence_profile.jpg" 
+                  alt="Lawrence Kimutai" 
+                  class="w-full h-full object-cover object-top"
+                />
               </div>
             </div>
             
