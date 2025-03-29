@@ -6,6 +6,7 @@ import SkillsSection from './components/SkillsSection.vue';
 import ExperienceSection from './components/ExperienceSection.vue';
 import ProjectsSection from './components/ProjectsSection.vue';
 import EducationSection from './components/EducationSection.vue';
+import BlogSection from './components/BlogSection.vue';
 import ContactSection from './components/ContactSection.vue';
 import Footer from './components/Footer.vue';
 import ThemeSettings from './components/ThemeSettings.vue';
@@ -33,6 +34,7 @@ onMounted(() => {
         <SkillsSection />
         <ExperienceSection />
         <ProjectsSection />
+        <BlogSection />
         <EducationSection />
         <ContactSection />
       </div>
