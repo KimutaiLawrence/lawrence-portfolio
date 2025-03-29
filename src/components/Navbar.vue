@@ -27,8 +27,8 @@ const navLinks = [
       <div class="flex items-center justify-between h-16 md:h-20">
         <!-- Logo -->
         <a href="#home" class="text-2xl font-bold text-gray-900 dark:text-white flex items-center space-x-2">
-          <span class="text-primary-600 dark:text-primary-400">L</span>
-          <span>Kimutai</span>
+          <span class="text-primary-600 dark:text-primary-400">Lawrence</span>
+          <span>K</span>
         </a>
         
         <!-- Desktop Navigation -->
