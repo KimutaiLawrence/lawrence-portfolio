@@ -55,7 +55,7 @@
         </article>
         
         <!-- "View All" Card -->
-        <a href="https://medium.com/@lawrencekimutai" target="_blank" rel="noopener noreferrer" class="blog-card-more">
+        <a href="https://medium.com/@kimutai.lawrence19" target="_blank" rel="noopener noreferrer" class="blog-card-more">
           <div class="bg-white/50 dark:bg-dark-800/50 backdrop-blur-sm border-2 border-dashed border-gray-200 dark:border-dark-700 rounded-xl overflow-hidden h-full flex flex-col items-center justify-center p-8 transition-all duration-300 hover:border-primary-400 dark:hover:border-primary-500 group">
             <div class="w-16 h-16 rounded-full flex items-center justify-center bg-gray-100 dark:bg-dark-700 group-hover:bg-primary-100 dark:group-hover:bg-primary-900/30 transition-colors duration-300 mb-4">
               <svg class="h-8 w-8 text-gray-500 dark:text-gray-400 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -72,31 +72,31 @@
 </template>
 
 <script setup>
-// Sample blog posts data - in a real application, you would fetch this from an API
+// Actual Medium blog posts data
 const blogPosts = [
   {
-    title: "Building Interactive Web Maps with Mapbox GL JS and Vue 3",
-    excerpt: "Learn how to integrate Mapbox GL JS with Vue 3 Composition API to create responsive and interactive web mapping applications with custom controls and data visualization.",
-    imageUrl: "/images/blog/webmaps-vue.jpg",
-    link: "https://medium.com/@lawrencekimutai/building-interactive-web-maps-with-mapbox-gl-js-and-vue-3",
-    date: "Mar 15, 2025",
-    readTime: 8
+    title: "Accessing Satellite Imagery Using Python",
+    excerpt: "As a Geospatial Analyst, you may want to access and analyze satellite imagery using python and carry out your analysis from there.",
+    imageUrl: "https://miro.medium.com/v2/resize:fill:400:266/1*CbcQlldKavTz7LC_3kLegw.jpeg",
+    link: "https://medium.com/@kimutai.lawrence19/accessing-satellite-imagery-using-python-5628e0b96e45",
+    date: "Mar 2024",
+    readTime: 5
   },
   {
-    title: "Geospatial Analysis with Python: A Practical Guide",
-    excerpt: "Explore powerful techniques for geospatial data analysis using Python libraries like GeoPandas, Shapely, and Rasterio to solve real-world spatial problems.",
-    imageUrl: "/images/blog/python-geospatial.jpg",
-    link: "https://medium.com/@lawrencekimutai/geospatial-analysis-with-python-a-practical-guide",
-    date: "Feb 28, 2025",
-    readTime: 12
+    title: "Harnessing Google Earth Engine for Everyday Geospatial Tasks: A Case Study in Sugarcane Detection",
+    excerpt: "Geospatial analysis has become an essential tool for monitoring land use, agriculture, and environmental changes. One of the most powerful platforms for large-scale geospatial analysis is Google Earth Engine.",
+    imageUrl: "https://miro.medium.com/v2/resize:fill:400:266/1*olZbEvqdwPGoUBIsRu8VrA.jpeg",
+    link: "https://medium.com/@kimutai.lawrence19/harnessing-google-earth-engine-for-everyday-geospatial-tasks-a-case-study-in-sugarcane-detection-a5cf842c9a9b",
+    date: "Feb 2024",
+    readTime: 5
   },
   {
-    title: "Creating Location-Based Services with QGIS and PostGIS",
-    excerpt: "A comprehensive tutorial on developing location-based services using QGIS for data preparation and PostGIS for spatial querying and analysis.",
-    imageUrl: "/images/blog/qgis-postgis.jpg",
-    link: "https://medium.com/@lawrencekimutai/creating-location-based-services-with-qgis-and-postgis",
-    date: "Jan 10, 2025",
-    readTime: 10
+    title: "The Future of Geospatial Technologies: Shaping Our World with Code and Data",
+    excerpt: "The world is increasingly dependent on spatial awareness—knowing where things happen, understanding how places change over time, and visualizing complex spatial relationships.",
+    imageUrl: "https://miro.medium.com/v2/resize:fill:400:266/1*THnFyIPdQz84fkxv74QZ1Q.png",
+    link: "https://medium.com/@kimutai.lawrence19/the-future-of-geospatial-technologies-shaping-our-world-with-code-and-data-2821c817aa25",
+    date: "Jan 2024",
+    readTime: 5
   }
 ];
 </script>
