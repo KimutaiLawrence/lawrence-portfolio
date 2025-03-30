@@ -9,7 +9,6 @@ import EducationSection from './components/EducationSection.vue';
 import BlogSection from './components/BlogSection.vue';
 import ContactSection from './components/ContactSection.vue';
 import Footer from './components/Footer.vue';
-import ThemeSettings from './components/ThemeSettings.vue';
 import { useFontType } from './composables/useFontType';
 
 const isLoaded = ref(false);
@@ -41,8 +40,5 @@ onMounted(() => {
     </main>
     
     <Footer />
-    
-    <!-- Theme Settings Panel -->
-    <ThemeSettings />
   </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <section id="home" class="min-h-screen flex items-center pt-16 pb-16 bg-gradient-to-br from-white via-gray-50 to-gray-100 dark:from-dark-950 dark:via-dark-900 dark:to-dark-800 relative overflow-hidden">
+  <section id="home" class="min-h-screen flex items-center pt-32 pb-16 bg-gradient-to-br from-white via-gray-50 to-gray-100 dark:from-dark-950 dark:via-dark-900 dark:to-dark-800 relative overflow-hidden">
     <!-- Background decorative elements -->
     <div class="absolute top-20 right-10 w-72 h-72 bg-primary-300/10 dark:bg-primary-500/10 rounded-full blur-3xl"></div>
     <div class="absolute bottom-10 left-10 w-60 h-60 bg-yellow-300/10 dark:bg-yellow-500/10 rounded-full blur-3xl"></div>
