@@ -54,45 +54,52 @@
         <!-- Project Card 2 -->
         <div class="bg-white dark:bg-dark-800 rounded-xl shadow-md overflow-hidden border border-gray-200 dark:border-dark-700 transition-all hover:shadow-lg">
           <!-- Project Image -->
-          <div class="h-48 bg-gray-200 dark:bg-dark-700 flex items-center justify-center">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-gray-400 dark:text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 22V12h6v10" />
-            </svg>
+          <div class="h-48 bg-gray-200 dark:bg-dark-700 overflow-hidden">
+            <img 
+              src="/images/projects/geopropertyhub-dashboard.jpeg" 
+              alt="GeoProperty Hub Dashboard"
+              class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500"
+            />
           </div>
           
           <!-- Project Content -->
           <div class="p-6">
             <div class="flex justify-between items-start">
-              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">GeoProperty Finder</h3>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">GeoProperty Hub</h3>
               <span class="text-xs px-2 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-300 rounded-full">Web/Mobile</span>
             </div>
             
             <p class="text-gray-600 dark:text-gray-300 mb-4">
-              A real estate platform with advanced spatial search capabilities and neighborhood analytics for property evaluation.
+              A property management system with geolocation features, featuring interactive maps, property listings, and spatial search capabilities.
             </p>
             
             <div class="flex flex-wrap gap-2 mb-6">
               <span class="skill-badge">Vue.js</span>
-              <span class="skill-badge">Leaflet</span>
-              <span class="skill-badge">Node.js</span>
-              <span class="skill-badge">MongoDB</span>
-              <span class="skill-badge">AWS</span>
+              <span class="skill-badge">OpenLayers</span>
+              <span class="skill-badge">Flask</span>
+              <span class="skill-badge">PostgreSQL</span>
+              <span class="skill-badge">TailwindCSS</span>
             </div>
             
             <div class="flex space-x-3">
-              <a href="#" class="text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 flex items-center">
+              <a href="https://geopropertyhub-frontend.vercel.app/dashboard" target="_blank" rel="noopener noreferrer" class="text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                 </svg>
-                Demo
+                Live Demo
               </a>
-              <a href="#" class="text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 flex items-center">
+              <a href="https://github.com/KimutaiLawrence/geopropertyhub-frontend" target="_blank" rel="noopener noreferrer" class="text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                 </svg>
-                Code
+                Frontend Code
+              </a>
+              <a href="https://github.com/KimutaiLawrence/geopropertyhub-backend" target="_blank" rel="noopener noreferrer" class="text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+                Backend Code
               </a>
             </div>
           </div>
